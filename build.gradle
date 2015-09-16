@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath group: 'org.testobject', name: 'testobject-quality-report-gradle-plugin', version: '0.0.2'
+        classpath group: 'org.testobject', name: 'testobject-quality-report-gradle-plugin', version: '0.0.3'
     }
 }
 
