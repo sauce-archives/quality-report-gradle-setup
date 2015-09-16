@@ -15,8 +15,15 @@ buildscript {
 apply plugin: 'testobjectQualityReport'
 
 testobjectQualityReport {
-    username "your_username" // username you use to login into TestObject, not your email
-    password "your_password" // password you use to login into TestObject
-    team "your_team_name" //name of the team you belong to (optional)
-    app "your_app_name" // name of your app
+    // hard-coded credentials
+    // username "your_username" // username you use for login into TestObject, not your email
+    // password "your_password" // password you use for login into TestObject
+    // team "your_team_name" // name of the team you belong to (optional)
+    // app "your_app_name" // name of your app
+
+    // OR environment variables
+    username System.getenv('TESTOBJECT_USERNAME') // username you use to login into TestObject, not your email
+    password System.getenv('TESTOBJECT_PASSWORD') // password you use to login into TestObject
+    // team System.getenv('TESTOBJECT_TEAM_ID') // name of the team you belong to (optional)
+    app System.getenv('TESTOBJECT_APP_ID') // name of your app
 }
