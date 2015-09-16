@@ -1,0 +1,22 @@
+group 'com.testobject'
+version '0.1'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo' }
+    }
+
+    dependencies {
+        classpath group: 'org.testobject', name: 'testobject-quality-report-gradle-plugin', version: '0.0.2'
+    }
+}
+
+apply plugin: 'testobjectQualityReport'
+
+testobjectQualityReport {
+    username "your_username" // username you use to login into TestObject, not your email
+    password "your_password" // password you use to login into TestObject
+    team "your_team_name" //name of the team you belong to (optional)
+    app "your_app_name" // name of your app
+}
